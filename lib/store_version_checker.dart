@@ -52,7 +52,7 @@ class StoreVersionChecker {
     String? url;
     final uri = Uri.https("itunes.apple.com", "/lookup", {
       "bundleId": packageName,
-      "cache-prevent": DateTime.now().millisecondsSinceEpoch,
+      "cache-prevent": DateTime.now().millisecondsSinceEpoch.toString(),
     });
 
     try {
