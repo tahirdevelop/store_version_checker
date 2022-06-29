@@ -50,10 +50,14 @@ class StoreVersionChecker {
     String? errorMsg;
     String? newVersion;
     String? url;
-    var uri =
-        Uri.https("itunes.apple.com", "/lookup", {"bundleId": packageName});
+    final uri = Uri.https("itunes.apple.com", "/lookup", {
+      "bundleId": packageName,
+      "cache-prevent": DateTime.now().millisecondsSinceEpoch,
+    });
+
     try {
       final response = await http.get(uri);
+
       if (response.statusCode != 200) {
         errorMsg =
             "Can't find an app in the Apple Store with the id: $packageName";
