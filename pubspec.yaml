@@ -1,7 +1,7 @@
 name: store_version_checker
 homepage: https://github.com/tahirdevelop/store_version_checker
 description: A lightweight flutter plugin to check if your app is up-to-date on Google Play Store or Apple App Store
-version: 0.0.1
+version: 0.0.2
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
